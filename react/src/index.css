@@ -1,0 +1,472 @@
+
+/* ******************** */
+/*        footer        */
+/* ******************** */
+.common {
+  background-color: #131111;
+  color: #fff; 
+}
+
+
+/* ******************** */
+/*        header        */
+/* ******************** */
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.bg-black-333 {
+  background-color: #131111;
+}
+
+
+/* ******************** */
+/*        sign        */
+/* ******************** */
+.sign-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  
+  
+}
+
+.sign-form {
+  border: 2px solid #2b2929;
+  border-radius: 10px;
+  padding: 10px;
+  width: 600px;
+  background-color: antiquewhite;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: right;
+    
+}
+
+.register-button {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+.close-button {
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+ }
+
+#nom{
+  padding-right: 68px;
+}
+#telephone{
+  padding-right: 34px;
+}
+#password{
+  padding-right: 15px;
+}
+#couriel{
+    padding-right: 55px;
+}
+#codepostal{
+  padding-right: 20px;
+}
+#adresse{
+  padding-right: 46px;
+}
+#identity{
+  padding-right: 94px;
+}
+.message_sign{ 
+  text-align: center;
+  padding: 10px;
+  font-size: medium;
+  
+}
+ 
+/* ***************************************/
+/*  page inventaire triangle de liste)   */
+/* ***************************************/
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper .triangle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000; /* Change the color as needed */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* ***************************************/
+/*  page InventaireTasble                */
+/* ***************************************/
+.inventaire-table {
+  width: 95%;
+  
+}
+
+.inventaire-table th {
+  background-color: rgb(194, 189, 189);
+  text-align: center;
+  border: 1px solid black;
+  
+}
+
+.inventaire-table td {
+  text-align: center;
+  border: 1px solid black;
+ 
+}
+
+.delete-button {
+  background-color: red;
+  
+}
+
+.modify-button {
+  background-color: rgba(92, 92, 241, 0.664);
+}
+
+/* ***************************************/
+/*  popup-window                         */
+/* ***************************************/
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.popup-window {
+  background-color: white;
+  border: 1px solid #160b0b;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.popup-table {
+  width: 100%;
+  border-collapse: collapse; 
+  
+}
+
+.popup-table td,
+.popup-table th {
+  border: 1px solid #1d1a1a;
+  /* padding: 8px; */
+  text-align: center;  
+}
+.close-button {  
+  background-color: #007bff;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+/* ***************************************/
+/*  vertical line                         */
+/* ***************************************/
+.vertical-line {
+  border-left: 2px solid black;
+  height: 100px; /* Adjust height as needed */
+    
+}
+/* ***************************************/
+/*  card                                 */
+/* ***************************************/
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  background-color: greenyellow !important;
+ border-color: #714add; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  /* overflow: hidden; */
+  /* width: 250px; */ 
+  
+}
+.hover-zoom:hover {
+  transform: scale(1.15); /* Increase size by 15% on hover */
+}
+
+/* ***************************************/
+/*  language                             */
+/* ***************************************/
+.language-selector{
+  padding-right: 40px;
+}
+/* ***************************************/
+/*  Shopping card                        */
+/* ***************************************/
+.home-card {
+	width: 150px;
+	height: 200px;
+	background-color: #eaf825;
+}
+
+.titre{
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+}
+
+.containerDePage{
+ background-color: #eaf825;
+ border-color: black;
+ border-style:double;
+}
+.cart-items{
+	margin: 30px auto;
+	width: 50%;
+	background-color: orange;
+	border-radius: 5px;
+}
+.cart-items-header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 20px;
+	height: 50px;
+	border-bottom: 2px solid black;
+}
+.cart-item-empty{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 700;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.cart-items-image{
+	width:100px;
+	height:auto;
+	border: 2px solid black;
+	margin-right: 10px;
+}
+.cart-items-list{
+	display:flex;
+	align-items: center;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+    font-size: 20px;
+	font-weight: 700;
+	margin-left: 5%;
+}
+.cart-items-name,
+.cart-items-function{
+	width:25%;
+}
+.cart-items-add,
+.cart-items-remove{
+	width: 30px;
+	margin-left: 15px;
+	font-weight: 700;
+	border: none;
+	border-radius: 3px;
+	font-size: 18px;
+	color:white;
+	cursor: pointer;
+}
+.cart-items-add{
+	background-color: red;
+}
+.cart-items-remove{
+	background-color: green;
+}
+.cart-items-add:active{
+	transform: translateY(1.2px);
+}
+.cart-items-remove:active{
+	transform: translateY(1.2px);
+}
+.cart-items-total-price-name{
+	display: flex;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 22%;
+	font-size: 20px;
+	font-weight: 700;
+	border-top: 2px solid black;
+}
+.cart-items-total-price{
+	display: flex;
+	padding-left: 45%;
+}
+.clear-cart{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10 px;
+	margin-right: 10px;
+}
+.clear-cart-button{
+	border:none;
+	border-radius: 5px;
+	background-color:#bd0e0e;
+	height: 30px;
+	width: 100px;
+	font-size: 18px;
+	color: white;
+	cursor: pointer;
+}
+.clear-cart-button:hover{
+	background-color: #0e557e;
+}
+
+.cadre{
+	border-color: black;
+	background-color: ghostwhite;
+	padding: 15px;
+	margin: 10px;
+	margin-left: 6px;
+	margin-top:10px;
+	margin-bottom: 10px;
+	width: 200px;
+	height: 240px;
+  }
+
+
+.taille{
+	font-size:12px;
+}
+.velo{
+	height: 130px;
+	width: 170px;
+}
+.position{
+	padding-right: 80px;
+}
+.product-add-button{
+	width: 100%;
+	border-radius: 10px;
+
+	
+}
+.product-add-button:hover{
+	background-color: rgb(231, 84, 194);	
+}
+/**********shopping effect ************/
+
+.progress-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 8px solid #ccc;
+  border-top-color: #007bff; 
+  animation: spin 2s linear infinite; 
+  background-color: #cfa4d4;
+  /* position: relative; */
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.progress-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #1a010fde;
+}
+
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* ***************************************/
+/*  Panier                               */
+/* ***************************************/
+
+
+.panier-container {
+  display: flex;
+}
+
+.left-column {
+  flex: 1;
+  border-right: 1px solid #ccc;
+  padding-right: 2px;
+}
+
+.right-column {
+  flex: 1;
+  padding-left: 2px;
+  background-color: #eaf825;
+}
+
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header th {
+  border: 1px solid #ccc;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.table-data td {
+  border: 1px solid #ccc;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.table-actions button {
+  margin-right: 1px;
+}
+
+
+ 
