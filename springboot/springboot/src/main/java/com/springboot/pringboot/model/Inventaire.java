@@ -31,4 +31,14 @@ public class Inventaire {
     @Column(name="PRIX")
     private double prix;
 
+
+    @Column(name="VENDU")
+    private boolean vendu;
+
+    // Constructors
+    public Inventaire() {
+        this.vendu = false; // Initialize vendu to false
+    }
+
+
 }

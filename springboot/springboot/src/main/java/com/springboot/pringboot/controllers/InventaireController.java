@@ -98,19 +98,16 @@ public class InventaireController {
         }
     }
 
-
-    @GetMapping ("/toutInventaires")
+    @GetMapping("/toutInventaires")
     public ResponseEntity<List<Inventaire>> getTousInventaire() {
         try {
-            List<Inventaire> _liste =inventaireRepository.findAll();
-            if(_liste == null || _liste.isEmpty()){
+            List<Inventaire> _liste = inventaireRepository.findByVendu(false);
+            if (_liste == null || _liste.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
-            return new ResponseEntity<>(_liste,HttpStatus.OK);
+            return new ResponseEntity<>(_liste, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-
 }
