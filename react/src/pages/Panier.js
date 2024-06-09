@@ -79,8 +79,8 @@ function Panier({ selectedProducts, removeFromList }) {
     <div className="panier-container">    
    
       <div className="left-column">
-      <h4>1- Sélectionnez les articles sur la page de production</h4>
-        <h5>2- Pré-achat.</h5>
+      
+        <h5>1- Liste de courses.</h5>
         <table className="table-container">
           <thead className="table-header">
             <tr>
@@ -127,7 +127,7 @@ function Panier({ selectedProducts, removeFromList }) {
         </table>
       </div>
       <div className="right-column">
-        <h5>3- Achat final:</h5>
+        <h5>2-Finaliser l'achat:</h5>
         <table className="table-container">
           <thead className="table-header">
             <tr>

@@ -73,7 +73,7 @@ function SignIn() {
             <div className="sign-container">      
               <form onSubmit={handleSubmit} className="sign-form">
               <div className="form-group">
-                  <label id="identity">Id:</label>
+                  <label id="identity">Nom d'usager:</label>
                   <input
                     type="identity"
                     name="identity"
@@ -97,7 +97,7 @@ function SignIn() {
                 </div>
                 
                 <button type="submit"  className="register-button">Se connecter</button><br/><br/>
-                <button onClick={handleToggleContainer} className="close-button">Se fermer</button>
+                <button onClick={handleToggleContainer} className="close-button">Fermer</button>
                 {message && <p className="message_sign">{message}</p>}
               </form>
               

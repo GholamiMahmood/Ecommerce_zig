@@ -20,25 +20,12 @@ public class UtilisateurController {
     private UtilisateurRepository utilisateurRepository;
 
 
-//    @GetMapping ("/tout-utilisateur")
-//    public ResponseEntity<List<Utilisateur>> getTousUtilisateur() {
-//        try {
-//            List<Utilisateur> _liste =utilisateurRepository.findAll();
-//            if(_liste == null || _liste.isEmpty()){
-//                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//            }
-//            return new ResponseEntity<>(_liste,HttpStatus.OK);
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
-
 @PostMapping("/sign-in")
 public ResponseEntity<String> loginUser(@RequestBody Utilisateur request) throws NoSuchAlgorithmException {
     // Retrieve the user from the database based on the provided username
     Utilisateur utilisateur = utilisateurRepository.findByidentity(request.getIdentity());
 
-    if (utilisateur != null) {
+    if (utilisateur != null && utilisateur.getIdentity().equals(request.getIdentity()) ) {
         //pass dans la BD
         String pass_bd = utilisateur.getPassword();
         String pass_sans_code = Security.extractToken(pass_bd);
@@ -73,37 +60,6 @@ public ResponseEntity<String> loginUser(@RequestBody Utilisateur request) throws
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-
-    // modifier l'information d'utilisateur
-//    @PutMapping("/{id}")
-//    public ResponseEntity<?> updateUtilisateur(@PathVariable Long id, @RequestBody Utilisateur utilisateur) {
-//            Optional<Utilisateur> utilisateurData=utilisateurRepository.findById(id);
-//
-//            if (utilisateurData.isPresent()) {
-//                Utilisateur _utilisateur=utilisateurData.get();
-//                _utilisateur.setNom(utilisateur.getNom());
-//                _utilisateur.setRole(utilisateur.getRole());
-//                _utilisateur.setCodePostal(utilisateur.getCodePostal());
-//                _utilisateur.setAdresse(utilisateur.getAdresse());
-//                _utilisateur.setTelephone(utilisateur.getTelephone());
-//                return new ResponseEntity<>(utilisateurRepository.save(_utilisateur),HttpStatus.OK);
-//
-//            } else {
-//                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//            }
-//    }
-
-    // DELETE method to delete a Utilisateur
-//    @DeleteMapping("/utilisateur/{id}")
-//    public ResponseEntity<HttpStatus> deleteUtilisateur(@PathVariable Long id) {
-//        try {
-//            utilisateurRepository.deleteById(id);
-//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
 }
 
 

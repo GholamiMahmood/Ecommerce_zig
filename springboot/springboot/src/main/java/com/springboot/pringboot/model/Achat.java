@@ -23,13 +23,14 @@ public class Achat {
     @Column(name="PRIX")
     private double prix;
 
-    @ManyToOne
-    @JoinColumn(name="INVENTAIREID", referencedColumnName = "CODE" , insertable = false, updatable = false)
-    private Inventaire inventaire;
+//    @ManyToOne
+//    @JoinColumn(name="INVENTAIREID", referencedColumnName = "CODE" , insertable = false, updatable = false)
+//    private Inventaire inventaire;
+//
+//    // Establishing relationship with Utilisateur entity based on utilisateurId
+//    @ManyToOne
+//    @JoinColumn(name="UTILISATEURID", referencedColumnName = "IDENTITY", insertable = false, updatable = false)
+//    private Utilisateur utilisateur;
 
-    // Establishing relationship with Utilisateur entity based on utilisateurId
-    @ManyToOne
-    @JoinColumn(name="UTILISATEURID", referencedColumnName = "IDENTITY", insertable = false, updatable = false)
-    private Utilisateur utilisateur;
 
 }

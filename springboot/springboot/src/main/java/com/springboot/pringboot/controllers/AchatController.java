@@ -1,11 +1,9 @@
 package com.springboot.pringboot.controllers;
 import com.springboot.pringboot.jpa_repository.InventaireRepository;
-import com.springboot.pringboot.model.Inventaire;
 import com.springboot.pringboot.model.Achat;
 
 import com.springboot.pringboot.jpa_repository.AchatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.gson.GsonProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +15,6 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping("/api")
 public class AchatController {
-
     @Autowired
     private AchatRepository achatRepository;
     /*
