@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: sql123!R
+      MYSQL_DATABASE: eco-mdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  springboot:
+    build:
+      context: ./springboot/springboot
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/eco-mdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: sql123!R
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+
+  react:
+    build:
+      context: ./react
+    ports:
+      - "3000:3000"
+    depends_on:
+      - springboot
+
+volumes:
+  mysql_data:

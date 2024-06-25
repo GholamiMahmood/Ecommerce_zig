@@ -12,14 +12,24 @@ const resources = {
     }
 };
 
+// Récupérer la langue stockée ou par défaut 'en
+const storedLanguage = localStorage.getItem('i18nextLng') || 'en';
+
 i18n
     .use(initReactI18next)
     .init({
         resources,
-        lng: 'en', // Default language
+        lng: storedLanguage, // Utiliser la langue stockée
+        fallbackLng: 'en', // Langue de secours si la traduction n'est pas trouvée
         interpolation: {
-            escapeValue: false // React already escapes by default
+            escapeValue: false //Lorsque escapeValue est défini sur false, i18next suppose que vous gérez le contenu vous-même et ne protège pas les caractères spéciaux
         }
     });
 
-export default i18n;
+// Function to change language and store the preference
+const changeLanguage = (lng) => {    
+    i18n.changeLanguage(lng);    
+};
+
+// Exportez à la fois i18n et changeLanguage dans un seul objet
+export default { i18n, changeLanguage };

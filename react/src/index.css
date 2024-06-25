@@ -45,10 +45,10 @@
 }
 
 .form-group input {
-  width: 80%;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  align-items: right;
+  /* align-items: right; */
     
 }
 
@@ -227,8 +227,26 @@
 /*  language                             */
 /* ***************************************/
 .language-selector{
-  padding-right: 40px;
+  display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
 }
+.en{
+    background-color: "white";
+    border: "solid";
+    cursor: "pointer";    
+    font-Size: "16px";
+    color: "black";
+}
+.fr{
+  background-color: "white";
+  border: "solid";
+  cursor: "pointer"; 
+  font-Size: "16px";
+  color: "black";
+}
+
 /* ***************************************/
 /*  Shopping card                        */
 /* ***************************************/
